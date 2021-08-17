@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1 id="massage">The massage wanna be delete</h1>
+        <input type="text" name="" id="delete-confirm" placeholder="please type delete">
+        <button id="delete-btn" disabled="disabled">Delete</button>
+        
+    </main>
+    <script>
+        document.getElementById('delete-btn').addEventListener('click',function(){
+            document.getElementById('massage').style.display = 'none';
+        })
+        //focus
+        document.getElementById('delete-confirm').addEventListener('click',function(){
+            document.getElementById('delete-confirm').style.backgroundColor = 'red';
+        })
+        //blur
+        document.getElementById('delete-confirm').addEventListener('blur',function(){
+            document.getElementById('delete-confirm').style.backgroundColor = 'whitesmoke';
+            
+        })
+        //keyup
+        document.getElementById('delete-confirm').addEventListener('keyup',function(){
+            const deleteField = document.getElementById('delete-confirm');
+            console.log(deleteField.value);
+            
+        })
+        
+    </script>
+</body>
+</html>
